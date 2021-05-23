@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+level_index = 6
+block_types = [ 0 ]
+block_number = [ 2 ]
+energy = 99
+health = 3
+intro_lines = [ "Hi there buddy!", "Look at those energy numbers..", "Woah! This hero must've drunk a tad too much of those energy drinks.", "heehee!", "Well, you know the saying..", "If you can't tire 'em, damage 'em!
+See, the hearts represent health.", "What happens if one's health reaches zero?", "What a dumb question.. are you a hero?!", "They become sad of course..
+Have you ever seen a sad hero?", "Not the most beautiful look I suppose..
+Before you ask, yes, the spikes always make 'em all weepy!!" ]
+win_lines = [ "Guess who's getting paid", "emma will be happy", "nice!", "i'm getting the hang of it", "hah, take that heroes!", "maybe i'm the true evil maze master?!" ]
+lose_lines = [ "i don't think she will fire me... yet", "This job is harder than I thought", "i'm starting to hate heroes -.-", "is it this maze.. or is it just me?", "i can't let emma know this", "i don't get paid enough for this" ]

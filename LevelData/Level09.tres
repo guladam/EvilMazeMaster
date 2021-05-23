@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+level_index = 9
+block_types = [ 0, 1 ]
+block_number = [ 3, 2 ]
+energy = 8
+health = 2
+intro_lines = [ "Hey intern!", "Let me do this one, i'm really bored!!!", "no? ok then, here's the deal:", "if you can stop the hero again, I'll give you a raise!", "if you can't... you're fired!!!!!", "heehee!" ]
+win_lines = [ "Guess who's getting a raise" ]
+lose_lines = [ "she can't fire me yet!
+i got this..." ]

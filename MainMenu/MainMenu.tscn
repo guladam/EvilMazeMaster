@@ -1,0 +1,348 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://MainMenu/title_maze.png" type="Texture" id=1]
+[ext_resource path="res://MainMenu/title_master.png" type="Texture" id=2]
+[ext_resource path="res://MainMenu/title_evil.png" type="Texture" id=3]
+[ext_resource path="res://MainMenu/title_head.png" type="Texture" id=4]
+[ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=5]
+[ext_resource path="res://UI/SoundAndMusicToggle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MainMenu/MainMenuButton.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Evil"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Evil:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, -10 ), Vector2( 20, 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Evil:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Maze", -1, 1.0, false ],
+"method": "play"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Head"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Head:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 80, 0 ), Vector2( 80, 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Head:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Buttons:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Buttons:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 220, 35 ), Vector2( 220, 50 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("AnimationPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "HeadLoop", -1, 1.0, false ],
+"method": "play"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SoundAndMusicToggle:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 157, -15 ), Vector2( 157, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("SoundAndMusicToggle:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "HeadLoop"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Head:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 80, 15 ), Vector2( 80, 11 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Master:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, 100 ), Vector2( 20, 115 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Master:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Head", -1, 1.0, false ],
+"method": "play"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Maze:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, 45 ), Vector2( 20, 60 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Maze:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "Master", -1, 1.0, false ],
+"method": "play"
+} ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Evil" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 20.0
+margin_top = -10.0
+margin_right = 112.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Maze" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 5.0
+margin_top = 45.0
+margin_right = 109.0
+margin_bottom = 95.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Master" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 5.0
+margin_top = 100.0
+margin_right = 161.0
+margin_bottom = 150.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 80.0
+margin_right = 96.0
+margin_bottom = 11.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -145.0
+margin_right = -36.0
+margin_bottom = -35.0
+custom_constants/separation = 7
+alignment = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="Buttons" instance=ExtResource( 9 )]
+
+[node name="LevelSelectorButton" parent="Buttons" instance=ExtResource( 9 )]
+margin_top = 39.0
+margin_bottom = 71.0
+
+[node name="Label" parent="Buttons/LevelSelectorButton" index="0"]
+text = "levels"
+
+[node name="QuitButton" parent="Buttons" instance=ExtResource( 9 )]
+margin_top = 78.0
+margin_bottom = 110.0
+
+[node name="Label" parent="Buttons/QuitButton" index="0"]
+text = "quit"
+
+[node name="SoundAndMusicToggle" parent="." instance=ExtResource( 6 )]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 1.0
+anchor_bottom = 0.0
+margin_left = -163.0
+margin_top = -15.0
+margin_right = 0.0
+margin_bottom = 17.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Evil"
+anims/Evil = SubResource( 1 )
+anims/Head = SubResource( 2 )
+anims/HeadLoop = SubResource( 3 )
+anims/Master = SubResource( 4 )
+anims/Maze = SubResource( 5 )
+
+[connection signal="button_press_finished" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="button_press_finished" from="Buttons/LevelSelectorButton" to="." method="_on_LevelSelectorButton_pressed"]
+[connection signal="button_press_finished" from="Buttons/QuitButton" to="." method="quit_game"]
+
+[editable path="Buttons/LevelSelectorButton"]
+[editable path="Buttons/QuitButton"]

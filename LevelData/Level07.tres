@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+level_index = 7
+block_types = [ 0, 3 ]
+block_number = [ 2, 3 ]
+energy = 25
+health = 3
+intro_lines = [ "Awww, you are doing so great!", "I'm proud of you little buddy, keep it up!", "Because if you don't.. you know how tough the job market is right now.", "Heehee!", "JK!
+Here, have some of your very own spikes!!!!" ]
+win_lines = [ "Guess who's getting paid", "emma will be happy", "nice!", "i'm getting the hang of it", "hah, take that heroes!", "maybe i'm the true evil maze master?!" ]
+lose_lines = [ "i don't think she will fire me... yet", "This job is harder than I thought", "i'm starting to hate heroes -.-", "is it this maze.. or is it just me?", "i can't let emma know this", "i don't get paid enough for this" ]

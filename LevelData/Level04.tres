@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+level_index = 4
+block_types = [ 0, 1 ]
+block_number = [ 2, 1 ]
+energy = 16
+health = -1
+intro_lines = [ "You've been working pretty hard newbie..", "Thought you deserve to have a doggo of your own.", "heehee!" ]
+win_lines = [ "Guess who's getting paid", "emma will be happy", "nice!", "i'm getting the hang of it", "hah, take that heroes!", "maybe i'm the true evil maze master?!" ]
+lose_lines = [ "i don't think she will fire me... yet", "This job is harder than I thought", "i'm starting to hate heroes -.-", "is it this maze.. or is it just me?", "i can't let emma know this", "i don't get paid enough for this" ]
