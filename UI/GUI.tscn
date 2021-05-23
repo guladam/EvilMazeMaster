@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/GUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HeroStats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/AvailableBlocks.tscn" type="PackedScene" id=6]
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HeroStats" parent="." instance=ExtResource( 4 )]
+
+[node name="AvailableBlocks" parent="." instance=ExtResource( 6 )]
+
+[node name="StartButton" parent="." instance=ExtResource( 2 )]
+margin_left = 7.0
+margin_top = 71.0
+margin_right = 39.0
+margin_bottom = 87.0
+
+[node name="Label" parent="StartButton" index="0"]
+text = "start"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="FadeInPosition" type="Position2D" parent="."]
+
+[node name="FadeOutPosition" type="Position2D" parent="."]
+position = Vector2( -120, 0 )
+
+[editable path="StartButton"]

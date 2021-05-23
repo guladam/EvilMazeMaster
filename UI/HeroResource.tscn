@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/HeroResource.gd" type="Script" id=1]
+
+[node name="HeroResource" type="Control"]
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 8, 8 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Full" type="TextureRect" parent="."]
+margin_right = 8.0
+margin_bottom = 8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empty" type="TextureRect" parent="."]
+visible = false
+margin_right = 8.0
+margin_bottom = 8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

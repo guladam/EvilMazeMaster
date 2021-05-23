@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Font/GameFontNormal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/button_wide1.png" type="Texture" id=2]
+[ext_resource path="res://UI/button_wide2.png" type="Texture" id=3]
+[ext_resource path="res://UI/button_wide3.png" type="Texture" id=4]
+[ext_resource path="res://UI/Button.gd" type="Script" id=5]
+[ext_resource path="res://SoundEffectPlayer/SoundEffectPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/button.wav" type="AudioStream" id=7]
+
+[node name="Button" type="TextureButton"]
+margin_right = 32.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 32, 16 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+expand = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 6.5
+margin_top = 2.0
+margin_right = 45.5
+margin_bottom = 18.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource( 6 )]
+clips = [ ExtResource( 7 ) ]
+[connection signal="button_down" from="." to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="." to="." method="_on_Button_button_up"]
+[connection signal="pressed" from="." to="." method="_on_Button_pressed"]
+[connection signal="finished" from="SoundEffectPlayer" to="." method="_on_SoundEffectPlayer_finished"]
