@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+level_index = 1
+block_types = [ 0 ]
+block_number = [ 2 ]
+energy = 13
+health = -1
+intro_lines = [ "Hey buddy!
+I have a surprise for you..", "We have some \"under construction\" signs lyin' around.", "You can use those to block this dum-dum's path.", "Convenient, right?", "use the left mouse button to put them down. You can cancel it with the right mouse button if you screw it up.", "you can only build in the highlighted areas tho.", "when you're ready, press the start button or [P] to watch the plot unravel..", "why would heroes want to wait until you put up obstacles?", "well, ya know those dum-dums are too courteous and polite to get moving until you finish.", "heehee!
+
+(by the way, if you feel like I talk too much you can skip these dialogues with [X])" ]
+win_lines = [ "Guess who's getting paid", "emma will be happy", "nice!", "i'm getting the hang of it", "hah, take that heroes!", "maybe i'm the true evil maze master?!" ]
+lose_lines = [ "i don't think she will fire me... yet", "This job is harder than I thought", "i'm starting to hate heroes -.-", "is it this maze.. or is it just me?", "i can't let emma know this", "i don't get paid enough for this" ]

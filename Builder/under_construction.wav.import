@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/under_construction.wav-03c9f301c05af2cf28c217441d047115.sample"
+
+[deps]
+
+source_file="res://Builder/under_construction.wav"
+dest_files=[ "res://.import/under_construction.wav-03c9f301c05af2cf28c217441d047115.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

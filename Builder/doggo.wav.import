@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/doggo.wav-3c9ccfdde77740858d3a763e4012cce4.sample"
+
+[deps]
+
+source_file="res://Builder/doggo.wav"
+dest_files=[ "res://.import/doggo.wav-3c9ccfdde77740858d3a763e4012cce4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

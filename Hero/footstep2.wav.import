@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep2.wav-7902def7d6852c7bf74cf97eb2967e00.sample"
+
+[deps]
+
+source_file="res://Hero/footstep2.wav"
+dest_files=[ "res://.import/footstep2.wav-7902def7d6852c7bf74cf97eb2967e00.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

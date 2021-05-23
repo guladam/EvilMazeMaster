@@ -1,0 +1,44 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Builder/Builder.gd" type="Script" id=1]
+[ext_resource path="res://Builder/selection.png" type="Texture" id=2]
+[ext_resource path="res://LevelData/Level01.tres" type="Resource" id=3]
+[ext_resource path="res://Builder/doggo.wav" type="AudioStream" id=4]
+[ext_resource path="res://Builder/spike.wav" type="AudioStream" id=5]
+[ext_resource path="res://SoundEffectPlayer/SoundEffectPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Builder/delete_block.wav" type="AudioStream" id=7]
+[ext_resource path="res://Builder/under_construction.wav" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "animate"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[node name="Builder" type="Node2D"]
+script = ExtResource( 1 )
+level_data = ExtResource( 3 )
+
+[node name="Indicator" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Indicator"]
+anims/animate = SubResource( 1 )
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="SoundEffectPlayer" parent="." instance=ExtResource( 6 )]
+clips = [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ) ]

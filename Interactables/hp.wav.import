@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hp.wav-c8cb1c5fdb6b76e4b0cf6b2a276a17af.sample"
+
+[deps]
+
+source_file="res://Interactables/hp.wav"
+dest_files=[ "res://.import/hp.wav-c8cb1c5fdb6b76e4b0cf6b2a276a17af.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

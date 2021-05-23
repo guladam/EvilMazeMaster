@@ -1,0 +1,176 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://GameState/GameState.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level/Level.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BossDialogue/DialogueWindow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/SoundAndMusicToggle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ProgressTracker/ProgressTracker.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Intro/Intro.gd" type="Script" id=8]
+[ext_resource path="res://Hero/Hero.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/GameWindow.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://LevelData/Intro.tres" type="Resource" id=12]
+[ext_resource path="res://GameState/GamePauser.gd" type="Script" id=13]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource( 8 )
+level_data = ExtResource( 12 )
+
+[node name="GameState" parent="." instance=ExtResource( 2 )]
+
+[node name="ProgressTracker" parent="." instance=ExtResource( 7 )]
+
+[node name="Level" parent="." instance=ExtResource( 3 )]
+
+[node name="Floor" parent="Level/TileSelector/LevelNavigation" index="0"]
+tile_data = PoolIntArray( -65521, 9, 0, -65520, 9, 0, 16, 9, 0, 65552, 9, 0, 65553, 9, 0, 65554, 9, 0, 131088, 9, 0, 131089, 9, 0, 131090, 9, 0, 262163, 9, 0, 262164, 9, 0, 327683, 13, 0, 327684, 7, 0, 327685, 7, 0, 327686, 7, 0, 327687, 7, 0, 327688, 7, 0, 327689, 7, 0, 327690, 7, 0, 327691, 7, 0, 327692, 7, 0, 327693, 7, 0, 327697, 9, 0, 327698, 9, 0, 327699, 9, 0, 327700, 9, 0, 393230, 1, 0, 393231, 1, 0, 393233, 9, 0, 393234, 9, 0, 393235, 9, 0, 393236, 9, 0, 458752, 1, 0, 458753, 1, 0, 458766, 1, 0, 458769, 9, 0, 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524300, 1, 0, 524301, 1, 0, 524304, 9, 0, 524305, 9, 0, 589824, 0, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589843, 2, 0, 655360, 0, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 2, 0, 720904, 3, 0, 786440, 1, 0, 786441, 1, 0 )
+
+[node name="Walls" parent="Level/TileSelector/LevelNavigation" index="1"]
+tile_data = PoolIntArray( 262146, 20, 0, 262147, 21, 0, 262148, 21, 0, 262149, 21, 0, 262150, 21, 0, 262151, 21, 0, 262152, 21, 0, 262153, 21, 0, 262154, 21, 0, 262155, 21, 0, 262156, 21, 0, 262157, 21, 0, 262158, 22, 0, 327682, 20, 0, 327694, 22, 0, 393218, 20, 0, 393219, 21, 0, 393220, 21, 0, 393221, 21, 0, 393222, 21, 0, 393223, 21, 0, 393224, 21, 0, 393225, 21, 0, 393226, 21, 0, 393227, 21, 0, 393228, 21, 0, 393229, 21, 0, 393230, 22, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458763, 1, 0, 458764, 1, 0, 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524307, 2, 0, 589824, 0, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 655360, 0, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 2, 0 )
+
+[node name="Line2D" parent="Level/TileSelector/LevelNavigation" index="2"]
+visible = false
+
+[node name="BuildSlots" parent="Level/TileSelector/LevelNavigation" index="3"]
+tile_data = PoolIntArray(  )
+
+[node name="Builder" parent="Level" index="1"]
+level_data = ExtResource( 12 )
+
+[node name="Entrance" parent="Level" index="2"]
+position = Vector2( 48, 96 )
+rotation = 4.71239
+offset = Vector2( 8, 8 )
+
+[node name="Exit" parent="Level" index="3"]
+position = Vector2( 208, 96 )
+rotation = -1.5708
+offset = Vector2( 8, 8 )
+
+[node name="EndPoint" parent="Level" index="4"]
+position = Vector2( 224, 88 )
+
+[node name="StartPoint" parent="Level" index="5"]
+position = Vector2( 48, 88 )
+
+[node name="Hero" parent="." instance=ExtResource( 9 )]
+position = Vector2( 56, 88 )
+starting_anim = "IdleRight"
+
+[node name="Sprite" parent="Hero" index="0"]
+frame = 8
+
+[node name="StatTracker" parent="Hero" index="5"]
+level_data = ExtResource( 12 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="HUD" instance=ExtResource( 11 )]
+
+[node name="HeroStats" parent="HUD/GUI" index="0"]
+level_data = ExtResource( 12 )
+
+[node name="AvailableBlocks" parent="HUD/GUI" index="1"]
+visible = false
+level_data = ExtResource( 12 )
+
+[node name="StartButton" parent="HUD/GUI" index="2"]
+visible = false
+
+[node name="Menu" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="DialogueWindow" parent="Menu" instance=ExtResource( 4 )]
+visible = false
+
+[node name="LevelEndWindow" parent="Menu" instance=ExtResource( 10 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Label" parent="Menu/LevelEndWindow/Background/MarginContainer" index="0"]
+text = ""
+
+[node name="Label" parent="Menu/LevelEndWindow/Background/Buttons/RestartButton" index="0"]
+margin_left = 2.5
+margin_right = 56.5
+text = "RESTART"
+
+[node name="Label" parent="Menu/LevelEndWindow/Background/Buttons/MenuButton" index="0"]
+text = "next"
+
+[node name="PauseWindow" parent="Menu" instance=ExtResource( 10 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+animation_speed = 0.25
+
+[node name="SoundAndMusicToggle" parent="Menu/PauseWindow/Background" index="0" instance=ExtResource( 5 )]
+margin_left = 21.5
+margin_top = 25.0
+margin_right = 59.5
+margin_bottom = -23.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[node name="MarginContainer" parent="Menu/PauseWindow/Background" index="1"]
+margin_right = 7.62939e-06
+margin_bottom = 25.0
+
+[node name="Label" parent="Menu/PauseWindow/Background/MarginContainer" index="0"]
+margin_top = 5.0
+margin_bottom = 14.0
+text = "PAUSE"
+
+[node name="Buttons" parent="Menu/PauseWindow/Background" index="2"]
+custom_constants/separation = 5
+
+[node name="Button" parent="Menu/PauseWindow/Background/Buttons" index="0" instance=ExtResource( 6 )]
+margin_left = 9.0
+margin_right = 41.0
+
+[node name="Label" parent="Menu/PauseWindow/Background/Buttons/Button" index="0"]
+text = "Menu"
+
+[node name="RestartButton" parent="Menu/PauseWindow/Background/Buttons" index="1"]
+margin_left = 46.0
+margin_right = 78.0
+
+[node name="Label" parent="Menu/PauseWindow/Background/Buttons/RestartButton" index="0"]
+margin_left = 2.5
+margin_right = 56.5
+text = "RESTART"
+
+[node name="MenuButton" parent="Menu/PauseWindow/Background/Buttons" index="2"]
+margin_left = 83.0
+margin_right = 115.0
+
+[node name="Label" parent="Menu/PauseWindow/Background/Buttons/MenuButton" index="0"]
+margin_left = 5.5
+text = "CLOSE "
+
+[node name="GamePauser" type="Node" parent="Menu/PauseWindow"]
+script = ExtResource( 13 )
+pause_menu_node = NodePath("..")
+
+[connection signal="level_lost" from="ProgressTracker" to="." method="_on_ProgressTracker_level_lost"]
+[connection signal="dialogue_ended" from="Menu/DialogueWindow" to="." method="_on_DialogueWindow_dialogue_ended"]
+[connection signal="button_press_finished" from="Menu/LevelEndWindow/Background/Buttons/RestartButton" to="." method="restart_level"]
+[connection signal="button_press_finished" from="Menu/LevelEndWindow/Background/Buttons/MenuButton" to="." method="back_to_menu"]
+[connection signal="button_press_finished" from="Menu/PauseWindow/Background/Buttons/Button" to="." method="back_to_menu"]
+[connection signal="button_press_finished" from="Menu/PauseWindow/Background/Buttons/RestartButton" to="." method="restart_level"]
+[connection signal="pressed" from="Menu/PauseWindow/Background/Buttons/MenuButton" to="Menu/PauseWindow" method="fade_out"]
+[connection signal="tween_all_completed" from="Menu/PauseWindow/Tween" to="Menu/PauseWindow/GamePauser" method="_on_PauseTween_tween_all_completed"]
+
+[editable path="Level"]
+[editable path="Level/TileSelector"]
+[editable path="Level/Builder"]
+[editable path="Hero"]
+[editable path="HUD/GUI"]
+[editable path="HUD/GUI/StartButton"]
+[editable path="Menu/DialogueWindow"]
+[editable path="Menu/LevelEndWindow"]
+[editable path="Menu/LevelEndWindow/Background/Buttons/RestartButton"]
+[editable path="Menu/LevelEndWindow/Background/Buttons/MenuButton"]
+[editable path="Menu/PauseWindow"]
+[editable path="Menu/PauseWindow/Background/Buttons/Button"]
+[editable path="Menu/PauseWindow/Background/Buttons/RestartButton"]
+[editable path="Menu/PauseWindow/Background/Buttons/MenuButton"]

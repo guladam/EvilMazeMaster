@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+level_index = 0
+block_types = [  ]
+block_number = [  ]
+energy = 11
+health = -1
+intro_lines = [ "Hey there newbie!", "i'm emma, a.k.a. the evil maze master / artist.
+or, in other words: your boss. heehee!", "see that dude over here?", "ugh, another hero...
+i hate heroes!!!!", "all they ever care about is looting dungeons, saving kingdoms and defeating all evil in the world.", "how boring!!!", "well, at least they give us a job right?!", "listen here buddy!", "heroes only have one thing in their minds: finding the next entrance...", "because, ya know, the better loot always lies deeper.", "this maze is one of my earlier works... see, I think even you could make it to the exit if you tried real hard.", "jk buddy :)", "oh, another thing. These \"heroes\" can get tired pretty quickly. how pathetic...", "heehee!", "the thing to remember is, when they are out of energy they fall asleep and you win!", "and guess what: if you win, i'm willing to pay your salary! 
+they call me generous boss emma for a reason...", "well, no one calls me that but you can... I mean you have to!" ]
+win_lines = [  ]
+lose_lines = [ "It's not your fault. This maze sucks." ]

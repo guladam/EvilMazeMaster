@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Level/Level.gd" type="Script" id=3]
+[ext_resource path="res://TileSelector/TileSelector.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Builder/Builder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Tileset/entrance.png" type="Texture" id=7]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TileSelector" parent="." instance=ExtResource( 5 )]
+
+[node name="Builder" parent="." instance=ExtResource( 6 )]
+
+[node name="Entrance" type="Sprite" parent="."]
+position = Vector2( 152, 200 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="Exit" type="Sprite" parent="."]
+position = Vector2( 184, -40 )
+texture = ExtResource( 7 )
+
+[node name="EndPoint" type="Position2D" parent="."]
+position = Vector2( 184, -48 )
+__meta__ = {
+"_gizmo_extents_": 8.0
+}
+
+[node name="StartPoint" type="Position2D" parent="."]
+position = Vector2( 152, 184 )
+__meta__ = {
+"_gizmo_extents_": 8.0
+}
+
+[connection signal="block_fully_created" from="TileSelector" to="." method="_on_TileSelector_block_fully_created_or_deleted"]
+[connection signal="block_fully_deleted" from="TileSelector" to="." method="_on_TileSelector_block_fully_created_or_deleted"]
+[connection signal="create_block" from="Builder" to="TileSelector" method="_on_Builder_create_block"]
+[connection signal="delete_block" from="Builder" to="TileSelector" method="_on_Builder_delete_block"]
+
+[editable path="TileSelector"]
+[editable path="Builder"]
